@@ -1,3 +1,8 @@
+
+
+
+
+
 body {
   margin: 0;
   padding: 0;
@@ -5,7 +10,9 @@ body {
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
   color: #111;
-  background: url('images/background.png') #edeff0;
+  /*Replace the background pattern PNG with the matching SVG (background.svg). Use CSS to resize the SVG to match the original design.*/
+  background: url('svgs/background.svg') #edeff0;
+  background-size: 4.5% auto;
 }
 
 #container {
@@ -25,10 +32,13 @@ a {
   text-decoration: none;
   color: #39add1;
   font-weight: 700;
+  transition: color 1s ease-in, font-size 1.2s;
   }
   a:hover {
     color: #111;
+    font-size: 125%;
   }
+
 
 header {
   padding-top: 10px;
@@ -74,4 +84,67 @@ footer {
   margin-top: 100px;
   padding-bottom: 30px;
   color: #ba8058;
+}
+
+/*nav icons:  change fill color back to the light blue*/
+.nav-icon-heart path.st0,
+.nav-icon-location path.st0,
+.nav-icon-contact path.st0
+  {
+  fill:#39ADD1;
+  transition: fill 1s ease-in;
+  }
+/*nav icons change color to black when hovering..... */
+  .nav-icon-heart path.st0:hover,
+  .nav-icon-location path.st0:hover,
+  .nav-icon-contact path.st0:hover
+  {
+    fill: #111;
+
+
+
+  }
+
+
+
+.logo-text {
+display: none;
+
+}
+/*1st corgi...tyring to change fill color, not working   */
+.corgi-red path.st0{fill:#BA8058;}
+.corgi-red path.st1{fill:#FBFEFF;}
+.corgi-red path.st2{fill:#2D3339;}
+.corgi-red path.st3{fill:#EAAA7F;}
+
+/* 2nd corgi */
+.corgi-fawn path.st0{fill:#EAAA7F;}
+.corgi-fawn path.st1{fill:#FBFEFF;}
+.corgi-fawn path.st2{fill:#2D3339;}
+.corgi-fawn path.st3{fill:#F4C6A6;}
+
+
+/* 3rd corgi */
+.corgi-sable path.st0{fill:#844B24;}
+.corgi-sable path.st1{fill:#FBFEFF;}
+.corgi-sable path.st2{fill:#2D3339;}
+.corgi-sable path.st3{fill:#BA8058;}
+
+/*4th corgi */
+.corgi-black path.st0{fill:#BA8058;}
+.corgi-black path.st1{fill:#52595F;}
+.corgi-black path.st2{fill:#FBFEFF;}
+.corgi-black path.st3{fill:#2D3339;}
+
+
+@media (max-width:420px) {
+
+.logo-text{
+  display: block;
+  }
+/*At a page width of less than 420 pixels remove the text from the logo and add an H1 tag that contains the logo text. */
+.st1 {
+  transform: translateX(150px);
+}
+
 }
