@@ -28,16 +28,30 @@ p {
   text-align: left;
 }
 
-a {
+a, a > svg{
   text-decoration: none;
   color: #39add1;
   font-weight: 700;
   transition: color 1s ease-in, font-size 1.2s;
+  transform: scale(1,1);
   }
-  a:hover {
+
+a:hover > svg, a:hover {
     color: #111;
     font-size: 125%;
+    transform: scale(1.25);
+    fill: #111;
+
   }
+
+
+a > svg path.st0 {
+  fill:#39ADD1;
+}
+
+a:hover > svg path.st0 {
+  fill: #111;
+}
 
 
 header {
@@ -86,25 +100,6 @@ footer {
   color: #ba8058;
 }
 
-/*nav icons:  change fill color back to the light blue*/
-.nav-icon-heart path.st0,
-.nav-icon-location path.st0,
-.nav-icon-contact path.st0
-  {
-  fill:#39ADD1;
-  transition: fill 1s ease-in;
-  }
-/*nav icons change color to black when hovering..... */
-  .nav-icon-heart path.st0:hover,
-  .nav-icon-location path.st0:hover,
-  .nav-icon-contact path.st0:hover
-  {
-    fill: #111;
-
-
-
-  }
-
 
 
 .logo-text {
@@ -143,7 +138,7 @@ display: none;
   display: block;
   }
 /*At a page width of less than 420 pixels remove the text from the logo and add an H1 tag that contains the logo text. */
-.st1 {
+.logo path.st1 {
   transform: translateX(150px);
 }
 
